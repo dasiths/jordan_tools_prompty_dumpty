@@ -5,7 +5,7 @@ author: Jordan Knight
 manifest_version: 1.0
 repository: https://github.com/dasiths/jordans_tools
 license: MIT
-external_repository: https://github.com/jakkaj@f64d36011a2d8acd356bacafe61383ef96ac29fc
+external_repository: https://github.com/jakkaj/tools@f64d36011a2d8acd356bacafe61383ef96ac29fc
 
 agents:
   copilot:
