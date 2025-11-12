@@ -1,0 +1,195 @@
+name: jk-tools-commands
+version: 1.0.0
+description: Comprehensive workflow commands for structured development with planning, architecture, and code review phases
+author: Jordan Knight
+manifest_version: 1.0
+repository: https://github.com/dasiths/jordans_tools
+license: MIT
+external_repository: https://github.com/jakkaj@f64d36011a2d8acd356bacafe61383ef96ac29fc
+
+agents:
+  copilot:
+    prompts:
+      # Documentation
+      - name: commands-readme
+        description: Complete guide to the /plan command workflow
+        file: agents/commands/README.md
+        installed_path: commands-readme.md
+      
+      # Planning workflow commands
+      - name: plan-0-constitution
+        description: Establish project constitution and align norms documents
+        file: agents/commands/plan-0-constitution.md
+        installed_path: plan-0-constitution.prompt.md
+      
+      - name: plan-1-specify
+        description: Create detailed feature specification
+        file: agents/commands/plan-1-specify.md
+        installed_path: plan-1-specify.prompt.md
+      
+      - name: plan-2-clarify
+        description: Clarify ambiguities in specifications
+        file: agents/commands/plan-2-clarify.md
+        installed_path: plan-2-clarify.prompt.md
+      
+      - name: plan-3-architect
+        description: Design architecture for implementation
+        file: agents/commands/plan-3-architect.md
+        installed_path: plan-3-architect.prompt.md
+      
+      - name: plan-3a-adr
+        description: Create Architecture Decision Record
+        file: agents/commands/plan-3a-adr.md
+        installed_path: plan-3a-adr.prompt.md
+      
+      - name: plan-4-complete-the-plan
+        description: Complete and finalize implementation plan
+        file: agents/commands/plan-4-complete-the-plan.md
+        installed_path: plan-4-complete-the-plan.prompt.md
+      
+      - name: plan-5-phase-tasks-and-brief
+        description: Break down phases into tasks with briefing
+        file: agents/commands/plan-5-phase-tasks-and-brief.md
+        installed_path: plan-5-phase-tasks-and-brief.prompt.md
+      
+      - name: plan-5a-subtask-tasks-and-brief
+        description: Break down tasks into subtasks
+        file: agents/commands/plan-5a-subtask-tasks-and-brief.md
+        installed_path: plan-5a-subtask-tasks-and-brief.prompt.md
+      
+      - name: plan-6-implement-phase
+        description: Execute implementation of a phase
+        file: agents/commands/plan-6-implement-phase.md
+        installed_path: plan-6-implement-phase.prompt.md
+      
+      - name: plan-6a-update-progress
+        description: Update progress tracking for phase/tasks
+        file: agents/commands/plan-6a-update-progress.md
+        installed_path: plan-6a-update-progress.prompt.md
+      
+      - name: plan-7-code-review
+        description: Comprehensive code review workflow
+        file: agents/commands/plan-7-code-review.md
+        installed_path: plan-7-code-review.prompt.md
+      
+      # Utility commands
+      - name: util-0-handover
+        description: Generate handover documentation for context transfer
+        file: agents/commands/util-0-handover.md
+        installed_path: util-0-handover.prompt.md
+      
+      # Research commands
+      - name: deepresearch
+        description: Perform deep research with web search
+        file: agents/commands/deepresearch.md
+        installed_path: deepresearch.prompt.md
+      
+      - name: substrateresearch
+        description: Research using Substrate framework
+        file: agents/commands/substrateresearch.md
+        installed_path: substrateresearch.prompt.md
+      
+      # Testing commands
+      - name: tad
+        description: Test-After-Development workflow
+        file: agents/commands/tad.md
+        installed_path: tad.prompt.md
+      
+      # Info commands
+      - name: didyouknow
+        description: Share VS Code tips and tricks
+        file: agents/commands/didyouknow.md
+        installed_path: didyouknow.prompt.md
+
+  claude:
+    commands:
+      # Documentation
+      - name: commands-readme
+        description: Complete guide to the /plan command workflow
+        file: agents/commands/README.md
+        installed_path: README.md
+      
+      # Planning workflow commands
+      - name: plan-0-constitution
+        description: Establish project constitution and align norms documents
+        file: agents/commands/plan-0-constitution.md
+        installed_path: plan-0-constitution.md
+      
+      - name: plan-1-specify
+        description: Create detailed feature specification
+        file: agents/commands/plan-1-specify.md
+        installed_path: plan-1-specify.md
+      
+      - name: plan-2-clarify
+        description: Clarify ambiguities in specifications
+        file: agents/commands/plan-2-clarify.md
+        installed_path: plan-2-clarify.md
+      
+      - name: plan-3-architect
+        description: Design architecture for implementation
+        file: agents/commands/plan-3-architect.md
+        installed_path: plan-3-architect.md
+      
+      - name: plan-3a-adr
+        description: Create Architecture Decision Record
+        file: agents/commands/plan-3a-adr.md
+        installed_path: plan-3a-adr.md
+      
+      - name: plan-4-complete-the-plan
+        description: Complete and finalize implementation plan
+        file: agents/commands/plan-4-complete-the-plan.md
+        installed_path: plan-4-complete-the-plan.md
+      
+      - name: plan-5-phase-tasks-and-brief
+        description: Break down phases into tasks with briefing
+        file: agents/commands/plan-5-phase-tasks-and-brief.md
+        installed_path: plan-5-phase-tasks-and-brief.md
+      
+      - name: plan-5a-subtask-tasks-and-brief
+        description: Break down tasks into subtasks
+        file: agents/commands/plan-5a-subtask-tasks-and-brief.md
+        installed_path: plan-5a-subtask-tasks-and-brief.md
+      
+      - name: plan-6-implement-phase
+        description: Execute implementation of a phase
+        file: agents/commands/plan-6-implement-phase.md
+        installed_path: plan-6-implement-phase.md
+      
+      - name: plan-6a-update-progress
+        description: Update progress tracking for phase/tasks
+        file: agents/commands/plan-6a-update-progress.md
+        installed_path: plan-6a-update-progress.md
+      
+      - name: plan-7-code-review
+        description: Comprehensive code review workflow
+        file: agents/commands/plan-7-code-review.md
+        installed_path: plan-7-code-review.md
+      
+      # Utility commands
+      - name: util-0-handover
+        description: Generate handover documentation for context transfer
+        file: agents/commands/util-0-handover.md
+        installed_path: util-0-handover.md
+      
+      # Research commands
+      - name: deepresearch
+        description: Perform deep research with web search
+        file: agents/commands/deepresearch.md
+        installed_path: deepresearch.md
+      
+      - name: substrateresearch
+        description: Research using Substrate framework
+        file: agents/commands/substrateresearch.md
+        installed_path: substrateresearch.md
+      
+      # Testing commands
+      - name: tad
+        description: Test-After-Development workflow
+        file: agents/commands/tad.md
+        installed_path: tad.md
+      
+      # Info commands
+      - name: didyouknow
+        description: Share VS Code tips and tricks
+        file: agents/commands/didyouknow.md
+        installed_path: didyouknow.md
