@@ -46,7 +46,7 @@ description: Comprehensive workflow commands for structured development
 manifest_version: 1.0
 author: Jordan Knight
 license: MIT
-repository: https://github.com/dasiths/jordans_tools
+homepage: https://github.com/dasiths/jordans_tools
 
 # This is the key feature - reference files from external repo
 external_repository: https://github.com/jakkaj/tools@f64d36011a2d8acd356bacafe61383ef96ac29fc
