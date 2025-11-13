@@ -3,7 +3,7 @@ version: 1.0.0
 description: Comprehensive workflow commands for structured development with planning, architecture, and code review phases
 author: Jordan Knight
 manifest_version: 1.0
-repository: https://github.com/dasiths/jordan_tools_prompty_dumpty
+homepage: https://github.com/dasiths/jordan_tools_prompty_dumpty
 license: MIT
 external_repository: https://github.com/jakkaj/tools@f64d36011a2d8acd356bacafe61383ef96ac29fc
 
