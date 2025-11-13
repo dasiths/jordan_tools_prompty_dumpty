@@ -42,11 +42,11 @@ Instead of copying files into your package repository, you **reference** them fr
 ```yaml
 name: jk-tools-commands
 version: 1.0.0
-description: Comprehensive workflow commands for structured development
-manifest_version: 1.0
+description: Comprehensive workflow commands for structured development with planning, architecture, and code review phases
 author: Jordan Knight
+manifest_version: 1.0
+homepage: https://github.com/dasiths/jordan_tools_prompty_dumpty
 license: MIT
-homepage: https://github.com/dasiths/jordans_tools
 
 # This is the key feature - reference files from external repo
 external_repository: https://github.com/jakkaj/tools@f64d36011a2d8acd356bacafe61383ef96ac29fc
