@@ -7,6 +7,29 @@ homepage: https://github.com/dasiths/jordan_tools_prompty_dumpty
 license: MIT
 external_repository: https://github.com/jakkaj/tools@f64d36011a2d8acd356bacafe61383ef96ac29fc
 
+# Categories allow users to selectively install command groups based on their workflow needs
+categories:
+  - name: documentation
+    description: Documentation and guides for understanding the workflow commands
+  
+  - name: planning
+    description: Commands for the planning phase - specification, clarification, and architecture
+  
+  - name: implementation
+    description: Commands for executing and tracking implementation work
+  
+  - name: review
+    description: Code review and quality assurance commands
+  
+  - name: research
+    description: Research and investigation tools with web search capabilities
+  
+  - name: testing
+    description: Testing workflow commands and utilities
+  
+  - name: utilities
+    description: General utility commands for productivity and knowledge sharing
+
 agents:
   copilot:
     prompts:
@@ -15,91 +38,108 @@ agents:
         description: Complete guide to the /plan command workflow
         file: agents/commands/README.md
         installed_path: commands-readme.md
+        categories: [documentation]
       
       # Planning workflow commands
       - name: plan-0-constitution
         description: Establish project constitution and align norms documents
         file: agents/commands/plan-0-constitution.md
         installed_path: plan-0-constitution.prompt.md
+        categories: [planning]
       
       - name: plan-1-specify
         description: Create detailed feature specification
         file: agents/commands/plan-1-specify.md
         installed_path: plan-1-specify.prompt.md
+        categories: [planning]
       
       - name: plan-2-clarify
         description: Clarify ambiguities in specifications
         file: agents/commands/plan-2-clarify.md
         installed_path: plan-2-clarify.prompt.md
+        categories: [planning]
       
       - name: plan-3-architect
         description: Design architecture for implementation
         file: agents/commands/plan-3-architect.md
         installed_path: plan-3-architect.prompt.md
+        categories: [planning]
       
       - name: plan-3a-adr
         description: Create Architecture Decision Record
         file: agents/commands/plan-3a-adr.md
         installed_path: plan-3a-adr.prompt.md
+        categories: [planning]
       
       - name: plan-4-complete-the-plan
         description: Complete and finalize implementation plan
         file: agents/commands/plan-4-complete-the-plan.md
         installed_path: plan-4-complete-the-plan.prompt.md
+        categories: [planning]
       
       - name: plan-5-phase-tasks-and-brief
         description: Break down phases into tasks with briefing
         file: agents/commands/plan-5-phase-tasks-and-brief.md
         installed_path: plan-5-phase-tasks-and-brief.prompt.md
+        categories: [planning, implementation]
       
       - name: plan-5a-subtask-tasks-and-brief
         description: Break down tasks into subtasks
         file: agents/commands/plan-5a-subtask-tasks-and-brief.md
         installed_path: plan-5a-subtask-tasks-and-brief.prompt.md
+        categories: [planning, implementation]
       
       - name: plan-6-implement-phase
         description: Execute implementation of a phase
         file: agents/commands/plan-6-implement-phase.md
         installed_path: plan-6-implement-phase.prompt.md
+        categories: [implementation]
       
       - name: plan-6a-update-progress
         description: Update progress tracking for phase/tasks
         file: agents/commands/plan-6a-update-progress.md
         installed_path: plan-6a-update-progress.prompt.md
+        categories: [implementation]
       
       - name: plan-7-code-review
         description: Comprehensive code review workflow
         file: agents/commands/plan-7-code-review.md
         installed_path: plan-7-code-review.prompt.md
+        categories: [review]
       
       # Utility commands
       - name: util-0-handover
         description: Generate handover documentation for context transfer
         file: agents/commands/util-0-handover.md
         installed_path: util-0-handover.prompt.md
+        categories: [utilities]
       
       # Research commands
       - name: deepresearch
         description: Perform deep research with web search
         file: agents/commands/deepresearch.md
         installed_path: deepresearch.prompt.md
+        categories: [research]
       
       - name: substrateresearch
         description: Research using Substrate framework
         file: agents/commands/substrateresearch.md
         installed_path: substrateresearch.prompt.md
+        categories: [research]
       
       # Testing commands
       - name: tad
         description: Test-After-Development workflow
         file: agents/commands/tad.md
         installed_path: tad.prompt.md
+        categories: [testing]
       
       # Info commands
       - name: didyouknow
         description: Share VS Code tips and tricks
         file: agents/commands/didyouknow.md
         installed_path: didyouknow.prompt.md
+        categories: [utilities]
 
   claude:
     commands:
@@ -108,88 +148,105 @@ agents:
         description: Complete guide to the /plan command workflow
         file: agents/commands/README.md
         installed_path: README.md
+        categories: [documentation]
       
       # Planning workflow commands
       - name: plan-0-constitution
         description: Establish project constitution and align norms documents
         file: agents/commands/plan-0-constitution.md
         installed_path: plan-0-constitution.md
+        categories: [planning]
       
       - name: plan-1-specify
         description: Create detailed feature specification
         file: agents/commands/plan-1-specify.md
         installed_path: plan-1-specify.md
+        categories: [planning]
       
       - name: plan-2-clarify
         description: Clarify ambiguities in specifications
         file: agents/commands/plan-2-clarify.md
         installed_path: plan-2-clarify.md
+        categories: [planning]
       
       - name: plan-3-architect
         description: Design architecture for implementation
         file: agents/commands/plan-3-architect.md
         installed_path: plan-3-architect.md
+        categories: [planning]
       
       - name: plan-3a-adr
         description: Create Architecture Decision Record
         file: agents/commands/plan-3a-adr.md
         installed_path: plan-3a-adr.md
+        categories: [planning]
       
       - name: plan-4-complete-the-plan
         description: Complete and finalize implementation plan
         file: agents/commands/plan-4-complete-the-plan.md
         installed_path: plan-4-complete-the-plan.md
+        categories: [planning]
       
       - name: plan-5-phase-tasks-and-brief
         description: Break down phases into tasks with briefing
         file: agents/commands/plan-5-phase-tasks-and-brief.md
         installed_path: plan-5-phase-tasks-and-brief.md
+        categories: [planning, implementation]
       
       - name: plan-5a-subtask-tasks-and-brief
         description: Break down tasks into subtasks
         file: agents/commands/plan-5a-subtask-tasks-and-brief.md
         installed_path: plan-5a-subtask-tasks-and-brief.md
+        categories: [planning, implementation]
       
       - name: plan-6-implement-phase
         description: Execute implementation of a phase
         file: agents/commands/plan-6-implement-phase.md
         installed_path: plan-6-implement-phase.md
+        categories: [implementation]
       
       - name: plan-6a-update-progress
         description: Update progress tracking for phase/tasks
         file: agents/commands/plan-6a-update-progress.md
         installed_path: plan-6a-update-progress.md
+        categories: [implementation]
       
       - name: plan-7-code-review
         description: Comprehensive code review workflow
         file: agents/commands/plan-7-code-review.md
         installed_path: plan-7-code-review.md
+        categories: [review]
       
       # Utility commands
       - name: util-0-handover
         description: Generate handover documentation for context transfer
         file: agents/commands/util-0-handover.md
         installed_path: util-0-handover.md
+        categories: [utilities]
       
       # Research commands
       - name: deepresearch
         description: Perform deep research with web search
         file: agents/commands/deepresearch.md
         installed_path: deepresearch.md
+        categories: [research]
       
       - name: substrateresearch
         description: Research using Substrate framework
         file: agents/commands/substrateresearch.md
         installed_path: substrateresearch.md
+        categories: [research]
       
       # Testing commands
       - name: tad
         description: Test-After-Development workflow
         file: agents/commands/tad.md
         installed_path: tad.md
+        categories: [testing]
       
       # Info commands
       - name: didyouknow
         description: Share VS Code tips and tricks
         file: agents/commands/didyouknow.md
         installed_path: didyouknow.md
+        categories: [utilities]
